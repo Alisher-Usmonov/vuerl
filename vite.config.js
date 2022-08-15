@@ -8,10 +8,12 @@ export default defineConfig({
       "/api": {
         target: "https://recut.in/api",
         changeOrigin: true,
-        secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
   plugins: [vue()],
+  build: {
+    sourcemap: true,
+  },
 });

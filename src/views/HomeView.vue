@@ -142,7 +142,7 @@ export default {
 
       const config = {
         method: "post",
-        url: "/api/url/add",
+        url: "https://recut.in/api/url/add",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

@@ -84,7 +84,7 @@ export default {
       this.selectedItems.forEach((item) => {
         const config = {
           method: "delete",
-          url: `/api/url/${item}/delete`,
+          url: `https://recut.in/api/url/${item}/delete`,
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -135,7 +135,7 @@ export default {
   async mounted() {
     const config = {
       method: "get",
-      url: `/api/url/${this.id}`,
+      url: `https://recut.in/api/url/${this.id}`,
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -151,11 +151,14 @@ export default {
   methods: {
     async deleteItem() {
       try {
-        const res = await axios.delete(`/api/url/${this.id}/delete`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const res = await axios.delete(
+          `https://recut.in/api/url/${this.id}/delete`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if ((res.status = 200)) {
           localStorage.setItem(
@@ -182,7 +185,7 @@ export default {
     async updateItem() {
       try {
         const res = await axios({
-          url: `/api/url/${this.id}/update`,
+          url: `https://recut.in/api/url/${this.id}/update`,
           method: "put",
           headers: {
             Authorization: `Bearer ${token}`,
